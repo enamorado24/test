@@ -1,0 +1,23 @@
+#!/bin/sh
+
+icon=""
+battery_charging=""
+
+info=`upower -i /org/freedesktop/UPower/devices/battery_BAT1`
+
+stat=`echo $info | egrep -o "state:[^a-z]*[a-z]+" | awk '{print $2}'`
+prcnt=`echo $info | egrep -o "percentage:[^a-z]*[0-9]+" | awk '{print $2}'`
+
+color=#abc891
+if [[ $prcnt -le 20 ]]; then
+        color=#f18eac
+elif [[ $prcnt -le 70 ]]; then
+        color=#efd18d
+fi
+
+if [[ $stat = 'charging' ]]; then
+        battery_charging=""
+fi
+
+printf "^c$color^ $icon $prcnt%%$battery_charging "
+

@@ -1,0 +1,20 @@
+#!/bin/sh
+
+data=`nmcli -f ACTIVE,SIGNAL,SSID dev wifi list | grep "yes" | awk '{print $2 " " $3}'`
+
+printf "^b#303030^^c#8a98ee^ "
+
+ssid=`echo $data | awk '{print $2}'`
+signal=`echo $data | awk '{print $1}'`
+
+if [[ $ssid = '' ]]; then
+        printf "Disconnect "
+        signal=0
+else
+        printf "$ssid "
+fi
+
+printf "^b#6c77bb^^c#222222^  "
+printf "^b#303030^^c#8a98ee^ $signal%% "
+
+

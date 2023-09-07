@@ -1,0 +1,11 @@
+#!/bin/sh 
+
+vol=`pamixer --get-volume`
+if [[ $vol -eq 0 ]]; then
+        printf "^c#8a98ee^ 婢 "
+else
+        printf "^c#8a98ee^  "
+fi
+
+printf "$vol%% "
+

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+printf "^c#d917b5^  "
+printf "$(~/.local/bin/xkblayout-state print %s | grep -o "[a-z]*" | tr '[a-z]' '[A-Z]') "
+

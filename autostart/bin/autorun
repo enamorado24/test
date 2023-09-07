@@ -1,0 +1,11 @@
+#!/bin/sh
+
+dwmblocks-go & 	# Draw statusbar
+
+# Set wallpapers
+feh --bg-scale ~/.config/dwm/dwm-wallpapers/background.jpg
+
+xrdb -merge ~/.Xresources
+
+firefox &
+telegram-desktop &

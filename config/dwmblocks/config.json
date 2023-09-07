@@ -1,0 +1,35 @@
+{
+	"blocks": [
+		{
+			"command": "sb-battery",
+			"interval": 2,
+			"signal": 0
+		},
+		{
+			"command": "sb-volume",
+			"interval": 0,
+			"signal": 1
+		},
+		{
+			"command": "sb-wifi",
+			"interval": 2,
+			"signal": 0
+		},
+		{
+			"command": "sb-locale",
+			"interval": 0,
+			"signal": 2
+		},	
+		{
+			"command": "sb-date",
+			"interval": 60,
+			"signal": 0
+		},
+		{
+			"command": "sb-time",
+			"interval": 2,
+			"signal": 0
+		}
+	],
+	"separator": "^b#222222^ "
+}

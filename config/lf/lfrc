@@ -1,0 +1,7 @@
+set icons
+
+map <delete> delete
+
+map <enter> shell
+
+
